@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Titanic analysis</h2>
+            <h3>Pclass</h3>
+            <input id="first" name="Pclass" type="number ">
+            <h3>What is the age</h3><br><input id="second" name="age" required="required">
+            <h3>sibSp</h3><input id="third" name="sibSp" required="required">
+            <h3>Parch ?</h3><br><input id="Parch" name="Parch" required="required">
+            <h3>Fare</h3><br><input name="Fare" id="Fare" required="required">
+            <h3>Sex</h3><br><select name="Sex" id="Sex" required="required">
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+            </select>
+            <h3>Embarked</h3><br><select name="Embarked" id="Embarked" required="required">
+                <option value="S">S</option>
+                <option value="Q">Q</option>
+				<option value="C">C</option>
+            </select>
+            <br><br><button id="sub" type="submit ">Survived or not ?</button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+</body>
+
+</html>
